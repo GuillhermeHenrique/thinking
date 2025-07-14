@@ -1,0 +1,25 @@
+<div class="dashboard">
+  <div class="title-container">
+    <h2>Dashboard</h2>
+    <a href="add" class="btn">Create Thinking</a>
+  </div>
+  <h3>Yours Thinkings</h3>
+  <ul>
+    {{#each thinkings}}
+      <li>
+        <span class="label">{{this.title}}</span>
+        <span class="actions">
+          <a href="/thinking/edit/{{this.id}}" class="btn">Edit</a>
+          <form action="/thinking/remove" method="post">
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <input type="submit" value="Delete" class="btn" />
+          </form>
+        </span>
+      </li>
+    {{/each}}
+  </ul>
+  {{#if emptyThinkings}}
+    <p>You don't have any Thinking yet, create
+      <a href="/thinking/add" class="add-btn"> here!</a></p>
+  {{/if}}
+</div>
