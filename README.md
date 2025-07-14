@@ -85,6 +85,8 @@ Search and view recent or old thoughts shared by users
 <img src="./public/images/164728.png">
 
 ### 🔐 Registration and login page
+Register on the platform and share your thoughts
+
 <img src="./public/images/164814.png">
 <img src="./public/images/164839.png">
 
